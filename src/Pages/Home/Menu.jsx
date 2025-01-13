@@ -28,6 +28,7 @@ const Menu = () => {
           dynamicBullets: true,
         }}
         modules={[Pagination]}
+        loop={true}
         className="mySwiper grid grid-cols-8 gap-2 py-3"
       >
         <SwiperSlide><MenuCard image={img1} name={'Appetizers'}/></SwiperSlide>

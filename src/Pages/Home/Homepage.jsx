@@ -1,5 +1,7 @@
 import Banner from "./Banner";
+import Featured from "./Featured";
 import Menu from "./Menu";
+import Popular from "./Popular";
 
 
 const Homepage = () => {
@@ -7,6 +9,8 @@ const Homepage = () => {
     <div className="lg:py-10">
       <Banner />
      <Menu />
+     <Featured />
+     <Popular />
     </div>
   );
 };
