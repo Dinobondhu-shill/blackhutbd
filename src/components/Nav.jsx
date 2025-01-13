@@ -2,15 +2,18 @@ import { Search, ChevronDown } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import { FaRegCircleUser } from "react-icons/fa6";
 import { IoIosCloseCircleOutline } from "react-icons/io";
+import { GiBeachBag } from "react-icons/gi";
+import { Link, NavLink } from 'react-router-dom';
+
 
 
 
 export default function Navbar() {
   return (
-    <nav className="">
+    <nav className=" shadow-sm shadow-gray-50 px-5 md:px-10 lg:px-28 bg-white">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between gap-4">
         {/* Logo */}
-        <a href="/" className="flex items-center gap-1">
+        <Link href="/" className="flex items-center gap-1">
           <svg
             viewBox="0 0 24 24"
             fill="none"
@@ -21,24 +24,31 @@ export default function Navbar() {
             <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
           </svg>
           <span className="text-xl font-bold">BlackHut</span>
-        </a>
+        </Link>
 
         {/* Navigation Links */}
         <div className="hidden md:flex items-center gap-6 text-sm">
-          <a href="/" className="font-medium hover:text-pink-600">Home</a>
-          <a href="/menu" className="font-medium hover:text-pink-600">Menu</a>
-          <a href="/offers" className="font-medium hover:text-pink-600">Offers</a>
+          <NavLink to={'/'}  className={({ isActive }) =>
+   isActive ? "text-pink-600 font-medium" : "text-black font-medium"
+  }>Home</NavLink >
+          <NavLink to={'/menu'}  className={({ isActive }) =>
+   isActive ? "text-pink-600 font-medium" : "text-black font-medium"
+  }>Menu</NavLink >
+          <NavLink to={'/offers'}   className={({ isActive }) =>
+   isActive ? "text-pink-600 font-medium" : "text-black font-medium"
+  }>Offers</NavLink>
         </div>
 
-        {/* Search Bar */}
-        <div className=" items-end max-w-md hidden md:block">
+      <div className='flex items-center gap-3'>
+          {/* Search Bar */}
+          <div className=" items-end max-w-md hidden md:block">
           <div className="relative">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />
             <input
             id='searchBar'
               type="search"
               placeholder="Search"
-              className=" bg-gray-50 rounded-full pl-10 pr-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-pink-400"
+              className=" bg-gray-200 rounded-full pl-10 pr-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-pink-400"
             />
             <span id='cross' className='absolute top-[10px] right-2 text-pink-600 hidden'>
            < IoIosCloseCircleOutline />
@@ -47,9 +57,9 @@ export default function Navbar() {
         </div>
 
         {/* Right Section */}
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-2">
           {/* Language Selector */}
-          <button className="hidden md:flex items-center gap-2 border px-2 py-2 rounded-full">
+          <button className="hidden md:flex items-center gap-2 border px-4 py-2 rounded-full">
             <img
               src="https://raw.githubusercontent.com/lipis/flag-icons/main/flags/4x3/gb.svg"
               alt="English"
@@ -61,15 +71,17 @@ export default function Navbar() {
 
           {/* Price */}
           <div className="hidden md:flex items-center gap-1 bg-gray-900 rounded-full px-5 py-2 text-white">
-            <span className="text-sm font-medium">₱20.00</span>
+           <GiBeachBag />
+            <span className="text-sm font-medium">20.00</span>
           </div>
 
           {/* Login Button */}
-          <Button className="bg-pink-600 hover:bg-pink-700 text-white rounded-full">
+          <Link to={'/login'} className=" flex items-center gap-2 px-5 py-2 bg-pink-600 hover:bg-pink-700  text-white rounded-full">
          < FaRegCircleUser />
             Log In
-          </Button>
+          </Link>
         </div>
+      </div>
       </div>
     </nav>
   )
