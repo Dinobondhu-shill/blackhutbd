@@ -10,7 +10,7 @@ const Root = () => {
    <div className="px-5 md:px-10 lg:px-28">
    <Outlet />
    </div>
-    <div className="px-5 md:px-10 lg:px-28">
+    <div className="">
     <Footer />
     </div>
     </div>
