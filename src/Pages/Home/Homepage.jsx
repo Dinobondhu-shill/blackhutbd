@@ -1,11 +1,12 @@
 import Banner from "./Banner";
+import Menu from "./Menu";
 
 
 const Homepage = () => {
   return (
     <div className="lg:py-10">
       <Banner />
-      THis is home page
+     <Menu />
     </div>
   );
 };
