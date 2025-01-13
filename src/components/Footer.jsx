@@ -7,7 +7,7 @@ import logo from '../../public/food/New/3.png'
 
 const Footer = () => {
   return (
-    <footer className="bg-[#292627] text-white px-5 md:px-10 lg:px-28">
+    <footer className="bg-[#FF0066] text-white px-5 md:px-10 lg:px-28">
     <div className="container px-4 py-8 mx-auto">
       <div className="flex justify-between">
         {/* Left Column - Newsletter */}

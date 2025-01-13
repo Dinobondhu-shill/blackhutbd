@@ -6,7 +6,7 @@ import Popular from "./Popular";
 
 const Homepage = () => {
   return (
-    <div className="lg:py-10">
+    <div className="lg:py-10 relative top-12">
       <Banner />
      <Menu />
      <Featured />

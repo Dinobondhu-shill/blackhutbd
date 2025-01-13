@@ -10,7 +10,7 @@ import { Link, NavLink } from 'react-router-dom';
 
 export default function Navbar() {
   return (
-    <nav className=" shadow-sm shadow-gray-50 px-5 md:px-10 lg:px-28 bg-white">
+    <nav className=" fixed w-full  z-50 shadow-sm shadow-gray-50 px-5 md:px-10 lg:px-28 bg-white">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between gap-4">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-1">
