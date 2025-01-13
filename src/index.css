@@ -16,3 +16,37 @@
 #searchBar:focus + #cross {
   display: block; 
 }
+/* banner navigation button  */
+
+.swiper-button-prev:after{
+  font-size: 15px;
+  font-weight: bold;
+  background-color: #FDFDFD;
+  width: 150px;
+  height: 30px;
+  color: rgb(84, 81, 81);
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 100%; 
+box-shadow: 0 10px 15px -3px rgba(18, 16, 16, 0.1), 0 4px 6px -4px rgba(0, 0, 0, .1);
+}
+.swiper-button-next:after{
+  font-size: 15px;
+  font-weight: bold;
+  background-color: #FDFDFD;
+  width: 150px;
+  height: 30px;
+  color: rgb(84, 81, 81);
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 100%; 
+box-shadow: 0 10px 15px -3px rgba(18, 16, 16, 0.1), 0 4px 6px -4px rgba(0, 0, 0, .1);
+}
+.swiper-button-prev:hover:after {
+  background-color: rgb(246, 164, 177);
+}
+.swiper-button-next:hover:after {
+  background-color: rgb(246, 164, 177);
+}
