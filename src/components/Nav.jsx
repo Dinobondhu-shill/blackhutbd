@@ -1,14 +1,19 @@
+import MyCart from '@/Pages/Cart/MyCart';
 import { Search, ChevronDown } from 'lucide-react'
-import { Button } from "@/components/ui/button"
 import { FaRegCircleUser } from "react-icons/fa6";
 import { IoIosCloseCircleOutline } from "react-icons/io";
-import { GiBeachBag } from "react-icons/gi";
 import { Link, NavLink } from 'react-router-dom';
 
 
 
 
+
+
 export default function Navbar() {
+
+
+
+
   return (
     <nav className=" fixed w-full  z-50 shadow-sm shadow-gray-50 px-5 md:px-10 lg:px-28 bg-white">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between gap-4">
@@ -69,11 +74,14 @@ export default function Navbar() {
             <ChevronDown className="h-4 w-4 text-gray-500" />
           </button>
 
-          {/* Price */}
-          <div className="hidden md:flex items-center gap-1 bg-gray-900 rounded-full px-5 py-2 text-white">
+          {/* Price
+          <div onClick={()=> setShowCart(!showCart)} className="hidden md:flex items-center gap-1 cursor-pointer bg-gray-900 rounded-full px-5 py-2 text-white">
            <GiBeachBag />
             <span className="text-sm font-medium">20.00</span>
-          </div>
+          </div> */}
+ <MyCart />
+
+
 
           {/* Login Button */}
           <Link to={'/login'} className=" flex items-center gap-2 px-5 py-2 bg-pink-600 hover:bg-pink-700  text-white rounded-full">

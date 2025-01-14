@@ -1,8 +1,10 @@
 import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function PhoneForm() {
   const [phoneNumber, setPhoneNumber] = useState("");
   const [error, setError] = useState("");
+  const navigate = useNavigate()
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -25,6 +27,7 @@ export default function PhoneForm() {
 
     // Handle successful submission
     setError(""); // Clear any previous errors
+    navigate('/verify-code')
     console.log("Phone number submitted:", formattedNumber);
   };
 
@@ -71,16 +74,14 @@ export default function PhoneForm() {
 
         <div className="text-center text-sm">
           <span className="text-gray-600">Already have an account? </span>
-          <button
+          <Link to={'/login'}
             type="button"
             className="text-pink-600 hover:text-pink-500 font-medium"
             onClick={() => {
-              // Handle login navigation
-              console.log("Navigate to login");
             }}
           >
             Log in
-          </button>
+          </Link >
         </div>
       </div>
     </div>

@@ -4,6 +4,7 @@ import Footer from "../components/Footer";
 
 
 const Root = () => {
+
   return (
     <div className="bg-gray-50"> 
     <Nav />

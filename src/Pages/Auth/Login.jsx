@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom';
+import PhoneForm from './PhoneForm';
 
 
 
@@ -11,6 +12,7 @@ const Login = () => {
   })
   
   const [errors, setErrors] = useState({})
+  
 
   const validateForm = () => {
     const newErrors = {}
@@ -38,6 +40,7 @@ const Login = () => {
       console.log('Form submitted:', formData)
     }
   }
+
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
@@ -135,12 +138,13 @@ const Login = () => {
               </div>
             </div>
 
-            <button
+            <Link
+           to={'/signup/guestverify'}
               type="button"
               className="w-full flex justify-center py-2 px-4 border border-pink-600 rounded-md shadow-sm text-sm font-medium text-pink-600 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-500"
             >
               Login As Guest
-            </button>
+            </Link>
           </div>
         </form>
       </div>
