@@ -8,6 +8,7 @@ import PhoneForm from "@/Pages/Auth/PhoneForm";
 import VerifyCode from "@/Pages/Auth/VerifyCode";
 import PhoneFormGuest from "@/Pages/Auth/PhoneFormGuest";
 import Register from "@/Pages/Auth/Register";
+import RedirectRoute from "./RedirectRoute";
 
 export const route = createBrowserRouter([
   {
@@ -28,23 +29,23 @@ export const route = createBrowserRouter([
     },
     {
       path: '/login',
-      element:<Login />
+      element:<RedirectRoute > <Login /> </RedirectRoute> 
     },
     {
       path:'/signup',
-      element: <PhoneForm />
+      element:  <RedirectRoute > <PhoneForm /> </RedirectRoute>
     },
     {
       path:'/signup/guest',
-      element: <PhoneFormGuest />
+      element:  <RedirectRoute > <PhoneFormGuest /> </RedirectRoute>
     },
     {
       path:'/verify-code',
-      element:<VerifyCode />
+      element: <RedirectRoute > <VerifyCode /> </RedirectRoute>
     },
     {
       path:'/signup/register',
-      element:<Register />
+      element:<RedirectRoute > <Register /> </RedirectRoute>
     }
    ]
   }
