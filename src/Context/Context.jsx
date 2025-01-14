@@ -1,9 +1,10 @@
-import { createContext } from "react";
+import { createContext, useState } from "react";
 import photo from '../../public/w3.jpg'
 
 export const BlackContext = createContext();
 
 const ContextProvider = ({children}) => {
+  const [showProfile, setShowProfile] =  useState(false)
   const user = {
     name:"Josim uddin ",
     email:"josimvai@gmail.com",
@@ -11,7 +12,9 @@ const ContextProvider = ({children}) => {
   }
 
   const values ={
-user
+user,
+showProfile,
+setShowProfile
   };
 
   return (

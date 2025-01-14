@@ -1,14 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { PiCallBellThin  } from "react-icons/pi";
 import { FaRegEdit } from "react-icons/fa";
 import { IoChatbubblesOutline, IoKeyOutline  } from "react-icons/io5";
 import { CiLocationOn, CiLogout  } from "react-icons/ci";
 import { Link } from 'react-router-dom';
+import { BlackContext } from '@/Context/Context';
 
 const Profile = ({data}) => {
-  console.log(data)
+  const {  showProfile } = useContext(BlackContext);
+
   return (
-    <div className='absolute top-14 right-2  transition-transform duration-300 ease-in-out transform text-base bg-white w-full md:max-w-sm rounded-md border p-3'>
+    <div className={`fixed top-16 right-4 w-full max-w-80 bg-white shadow-lg p-6 transition-transform duration-1000 ease-in-out ${
+    showProfile ? "translate-x-0" : "translate-x-full"
+    }`}>
       <div className='flex gap-5 items-center'> 
         <img src={data?.photo} alt="" className='w-16 h-16 object-cover rounded-full ' />
         <div>

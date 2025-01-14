@@ -10,8 +10,8 @@ import { FaChevronDown } from "react-icons/fa";
 import Profile from "./Profile";
 
 export default function Navbar() {
-  const { user } = useContext(BlackContext);
-  const [showProfile, setShowProfile] =  useState(false)
+  const { user, setShowProfile, showProfile } = useContext(BlackContext);
+  
 
   return (
     <nav className=" fixed w-full  z-50 shadow-sm shadow-gray-50 px-5 md:px-10 lg:px-28 bg-white">
@@ -98,7 +98,7 @@ export default function Navbar() {
             
 
             {user ? (
-              <Button onClick={()=>setShowProfile(!showProfile)} className=" cursor-pointer flex items-center gap-2 px-5 py-2 bg-pink-600 hover:bg-pink-700  text-white rounded-full">
+              <Button onClick={()=>setShowProfile(!showProfile)} className={`cursor-pointer flex items-center gap-2 px-5 py-2  hover:bg-pink-800  text-white rounded-full ${showProfile ? "bg-pink-800" : "bg-pink-700"}`}>
                 <FaRegCircleUser />
                 Account <FaChevronDown />
               </Button>
