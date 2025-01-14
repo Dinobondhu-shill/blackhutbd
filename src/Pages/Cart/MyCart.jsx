@@ -6,8 +6,10 @@ import {
   DrawerFooter,
   DrawerTrigger,
 } from "@/components/ui/drawer"
+import Lottie from "lottie-react";
 import React from "react";
 import { GiBeachBag } from "react-icons/gi";
+import animationData from "../../../public/food.json"
 
 const MyCart = () => {
   
@@ -20,7 +22,7 @@ const MyCart = () => {
       className="hidden md:flex items-center gap-1 cursor-pointer bg-gray-900 rounded-full px-5 py-2 text-white"
     >
       <GiBeachBag />
-      <span className="text-sm font-medium">20.00</span>
+      <span className="text-sm font-medium">0.00</span>
     </Button>
   </DrawerTrigger>
   <DrawerContent
@@ -29,8 +31,13 @@ const MyCart = () => {
     <div className="flex flex-col h-full">
       <div className="flex-grow">
         {/* Add your drawer content here */}
-        <h2 className="text-lg font-semibold mb-4">Your Cart</h2>
-        {/* Add more content as needed */}
+        <h2 className=" font-semibold text-2xl my-4 text-center ">Your Cart</h2>
+        
+        {/* content goes here */}
+        <div className="flex flex-col items-center justify-center h-full gap-10">
+        <Lottie className="w-36" animationData={animationData} loop={true} />
+        <p className="text-gray-600 text-center">Good food is always cooking! Go ahead, order some yummy items from the menu.</p>
+        </div>
       </div>
       <DrawerFooter className="mt-auto">
         <DrawerClose asChild>

@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 
 export default function VerifyCode() {
   const [code, setCode] = useState('')
@@ -77,12 +78,12 @@ export default function VerifyCode() {
           </div>
 
           <div>
-            <button
+            <Link to={'/signup/register'}
               type="submit"
               className="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-pink-600 hover:bg-pink-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-500"
             >
               Continue
-            </button>
+            </Link>
           </div>
         </form>
       </div>

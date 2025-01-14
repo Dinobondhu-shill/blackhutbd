@@ -6,6 +6,8 @@ import Offer from "@/Pages/Offer/Offer";
 import Login from "@/Pages/Auth/Login";
 import PhoneForm from "@/Pages/Auth/PhoneForm";
 import VerifyCode from "@/Pages/Auth/VerifyCode";
+import PhoneFormGuest from "@/Pages/Auth/PhoneFormGuest";
+import Register from "@/Pages/Auth/Register";
 
 export const route = createBrowserRouter([
   {
@@ -33,9 +35,17 @@ export const route = createBrowserRouter([
       element: <PhoneForm />
     },
     {
+      path:'/signup/guest',
+      element: <PhoneFormGuest />
+    },
+    {
       path:'/verify-code',
       element:<VerifyCode />
     },
+    {
+      path:'/signup/register',
+      element:<Register />
+    }
    ]
   }
 ])

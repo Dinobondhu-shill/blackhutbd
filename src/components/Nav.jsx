@@ -1,8 +1,11 @@
+import { BlackContext } from '@/Context/Context';
 import MyCart from '@/Pages/Cart/MyCart';
 import { Search, ChevronDown } from 'lucide-react'
+import { useContext } from 'react';
 import { FaRegCircleUser } from "react-icons/fa6";
 import { IoIosCloseCircleOutline } from "react-icons/io";
 import { Link, NavLink } from 'react-router-dom';
+import { Button } from './ui/button';
 
 
 
@@ -11,6 +14,7 @@ import { Link, NavLink } from 'react-router-dom';
 
 export default function Navbar() {
 
+  const {user} = useContext(BlackContext)
 
 
 
@@ -82,12 +86,17 @@ export default function Navbar() {
  <MyCart />
 
 
-
-          {/* Login Button */}
+              {
+                user ? <Button className=" flex items-center gap-2 px-5 py-2 bg-pink-600 hover:bg-pink-700  text-white rounded-full">
+                < FaRegCircleUser />
+                   Account
+                 </Button> :  
           <Link to={'/login'} className=" flex items-center gap-2 px-5 py-2 bg-pink-600 hover:bg-pink-700  text-white rounded-full">
          < FaRegCircleUser />
             Log In
           </Link>
+              }
+         
         </div>
       </div>
       </div>

@@ -1,15 +1,17 @@
 import { createContext } from "react";
-import { useState } from 'react';
+import photo from '../../public/w3.jpg'
 
 export const BlackContext = createContext();
 
 const ContextProvider = ({children}) => {
-  const [showCart, setShowCart] = useState(false);
+  const user = {
+    name:"Josim uddin ",
+    email:"josimvai@gmail.com",
+    photo: photo
+  }
 
   const values ={
-    setShowCart, 
-    showCart
-
+user
   };
 
   return (
