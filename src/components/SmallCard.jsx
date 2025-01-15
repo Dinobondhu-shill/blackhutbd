@@ -7,6 +7,7 @@ import {
 } from "@/components/ui/dialog";
 import { FaExclamationCircle } from "react-icons/fa";
 import { IoBagAdd } from "react-icons/io5";
+import AddCart from "./AddCart";
 
 const SmallCard = ({ image, name, price, description }) => {
   return (
@@ -34,13 +35,8 @@ const SmallCard = ({ image, name, price, description }) => {
         <p className="font-medium">৳{price} </p>
       </div>
       <div className="py-3 px-3">
-      <button
-        className="flex items-center gap-1 text-sm text-pink-600 shadow-lg px-2 py-1 cursor-pointer hover:bg-pink-600 hover:text-white
-               transition-all rounded-3xl"
-      >
-        {" "}
-        <IoBagAdd /> Add{" "}
-      </button>
+     
+     <AddCart name={'Coka-cola'} photo={image} price={29.00} description={"This is Description"} />
       </div>
     </div>
   );
