@@ -46,23 +46,23 @@ const Profile = ({data}) => {
       </div>
       {/* link list of profile  */}
       <div className='mt-10'>
-        <Link className='flex gap-3 items-center border-b py-3 '>
+        <Link to={'/user/orders'} className='flex gap-3 items-center border-b py-3 '>
           <PiCallBellThin  />
           <h5 className='text-sm font-normal text-gray-600 hover:text-pink-600 transition-transform ease-in-out duration-150'>My Orders</h5>
         </Link>
-        <Link className='flex gap-3 items-center border-b py-3 '>
+        <Link to={'/user/profile'} className='flex gap-3 items-center border-b py-3 '>
           <FaRegEdit  />
           <h5 className='text-sm font-normal text-gray-600 hover:text-pink-600 transition-transform ease-in-out duration-150'>Edit Profile</h5>
         </Link>
-        <Link className='flex gap-3 items-center border-b py-3 '>
+        <Link to={'/user/live-chat'} className='flex gap-3 items-center border-b py-3 '>
           <IoChatbubblesOutline  />
           <h5 className='text-sm font-normal text-gray-600 hover:text-pink-600 transition-transform ease-in-out duration-150'>Chat</h5>
         </Link>
-        <Link className='flex gap-3 items-center border-b py-3 '>
+        <Link to={'/user/address'} className='flex gap-3 items-center border-b py-3 '>
           <CiLocationOn  />
           <h5 className='text-sm font-normal text-gray-600 hover:text-pink-600 transition-transform ease-in-out duration-150'>Address</h5>
         </Link>
-        <Link className='flex gap-3 items-center border-b py-3 '>
+        <Link to={'/user/change-password'} className='flex gap-3 items-center border-b py-3 '>
           <IoKeyOutline   />
           <h5 className='text-sm font-normal text-gray-600 hover:text-pink-600 transition-transform ease-in-out duration-150'>Change Password</h5>
         </Link>

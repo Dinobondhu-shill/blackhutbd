@@ -51,7 +51,7 @@ export default function VerifyCode() {
           <div>
             <input
               type="text"
-              maxLength="6"
+              maxLength="4"
               value={code}
               onChange={(e) => {
                 const value = e.target.value.replace(/[^\d]/g, '')
@@ -78,12 +78,16 @@ export default function VerifyCode() {
           </div>
 
           <div>
-            <Link to={'/signup/register'}
+            {
+              code.length > 3 ? <Link to={'/signup/register'}
               type="submit"
-              className="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-pink-600 hover:bg-pink-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-500"
+              className={`w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-pink-600 hover:bg-pink-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-500`}
             >
               Continue
-            </Link>
+            </Link>: <button className={`w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-pink-600 hover:bg-pink-700 disabled:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-500`}>
+              Continue
+            </button> 
+            }
           </div>
         </form>
       </div>

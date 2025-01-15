@@ -2,8 +2,8 @@ import React from 'react';
 
 const Offer = () => {
   return (
-    <div>
-      This is offer page
+    <div className='py-20 h-screen flex justify-center items-center text-4xl font-bold '>
+      No Offer Available Right Now 
     </div>
   );
 };

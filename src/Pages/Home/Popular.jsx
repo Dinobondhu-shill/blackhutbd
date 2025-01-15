@@ -1,7 +1,7 @@
 import SectionTitle from '@/components/SectionTitle';
 import SmallCard from '@/components/SmallCard';
 import img1 from '../../../public/food/New/2024-10-15_022817-thumb.png'
-import img2 from '../../../public/food/New/684c528baf76e692a3ea88422119ec67-thumb.jpg'
+import img2 from '../../../public/food/New/coke.jpg'
 import img3 from '../../../public/food/New/Sprite-glass-thumb.jpg'
 
 

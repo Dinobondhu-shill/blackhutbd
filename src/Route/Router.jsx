@@ -9,6 +9,12 @@ import VerifyCode from "@/Pages/Auth/VerifyCode";
 import PhoneFormGuest from "@/Pages/Auth/PhoneFormGuest";
 import Register from "@/Pages/Auth/Register";
 import RedirectRoute from "./RedirectRoute";
+import PrivateRoute from "./PrivateRoute";
+import MyOrder from "@/Pages/Profile/MyOrder";
+import EditProfile from "@/Pages/Profile/EditProfile";
+import Address from "@/Pages/Profile/Address";
+import Chat from "@/Pages/Profile/Chat";
+import ChangePassword from "@/Pages/Profile/ChangePassword";
 
 export const route = createBrowserRouter([
   {
@@ -46,6 +52,26 @@ export const route = createBrowserRouter([
     {
       path:'/signup/register',
       element:<RedirectRoute > <Register /> </RedirectRoute>
+    },
+    {
+      path: '/user/orders',
+      element: <PrivateRoute><MyOrder /></PrivateRoute>
+    },
+    {
+      path: '/user/profile',
+      element: <PrivateRoute><EditProfile /></PrivateRoute>
+    },
+    {
+      path: '/user/address',
+      element: <PrivateRoute><Address /></PrivateRoute>
+    },
+    {
+      path: '/user/live-chat',
+      element: <PrivateRoute><Chat/></PrivateRoute>
+    },
+    {
+      path: '/user/change-password',
+      element: <PrivateRoute><ChangePassword /></PrivateRoute>
     }
    ]
   }

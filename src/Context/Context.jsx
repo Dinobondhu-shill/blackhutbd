@@ -1,5 +1,5 @@
 import { createContext, useState } from "react";
-import photo from '../../public/w3.jpg'
+import photo from '../../public/food/New/coke.jpg'
 
 export const BlackContext = createContext();
 
@@ -12,7 +12,7 @@ const ContextProvider = ({children}) => {
   }
 
   const values ={
-user,
+    user,
 showProfile,
 setShowProfile
   };
