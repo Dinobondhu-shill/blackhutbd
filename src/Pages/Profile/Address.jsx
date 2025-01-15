@@ -73,7 +73,7 @@ console.log(label)
      
     </div>
         <DialogFooter>
-          <Button className='w-full bg-pink-600' type="submit">Save changes</Button>
+          <Button className='w-full bg-pink-600 hover:bg-pink-500' type="submit">Save changes</Button>
         </DialogFooter>
       </DialogContent>
     </Dialog>

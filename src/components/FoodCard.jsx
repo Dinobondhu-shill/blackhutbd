@@ -9,6 +9,7 @@ import {
 import img1 from "../../public/food/New/Chicken-Chow-Mein-1-cover.jpg";
 import { IoBagAdd } from "react-icons/io5";
 import { FaExclamationCircle } from "react-icons/fa";
+import AddCart from "./AddCart";
 
 const FoodCard = () => {
   return (
@@ -35,13 +36,7 @@ const FoodCard = () => {
         <p className="text-gray-600 text-sm my-3">This is description</p>
         <div className="flex justify-between items-center pb-2">
           <p className="font-medium">৳249.00 </p>
-          <button
-            className="flex items-center gap-1 text-sm text-pink-600 shadow-lg px-2 py-1 cursor-pointer hover:bg-pink-600 hover:text-white
-         transition-all rounded-3xl"
-          >
-            {" "}
-            <IoBagAdd /> Add{" "}
-          </button>
+         <AddCart name={'Thai Fried chicken'} photo={img1} price={249.00} description={"Hello from description"} />
         </div>
       </div>
     </div>
