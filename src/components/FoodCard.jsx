@@ -7,7 +7,6 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import img1 from "../../public/food/New/Chicken-Chow-Mein-1-cover.jpg";
-import { IoBagAdd } from "react-icons/io5";
 import { FaExclamationCircle } from "react-icons/fa";
 import AddCart from "./AddCart";
 

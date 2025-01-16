@@ -6,7 +6,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 // import required modules
-import { Pagination } from 'swiper/modules';
+import { Pagination, Autoplay } from 'swiper/modules';
 import img1 from '../../../public/food/appetizers-cover.png'
 import img2 from '../../../public/food/appetizers-cover.png'
 import img3 from '../../../public/food/beef_entrees-cover-thumb.png'
@@ -27,8 +27,9 @@ const Menu = () => {
         pagination={{
           dynamicBullets: true,
         }}
-        modules={[Pagination]}
+        modules={[Pagination, Autoplay]}
         loop={true}
+        autoplay={true}
         className="mySwiper grid grid-cols-8 gap-2 py-3"
       >
         <SwiperSlide><MenuCard image={img1} name={'Appetizers'}/></SwiperSlide>
