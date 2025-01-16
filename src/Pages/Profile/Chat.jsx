@@ -73,27 +73,27 @@ const Chat = () => {
   };
 
   return (
-    <div className="lg:py-16 h-screen flex justify-center items-center">
-      <div className="bg-white h-5/6 my-10 w-3/5 rounded-md">
+    <div className="lg:py-6 h-screen  flex justify-center items-center">
+      <div className="bg-gray-800 h-5/6 w-3/5 rounded-md relative">
         {/* Messages display */}
-        <div className="p-4 max-h-[70%] text-end overflow-y-auto chat_plate">
+        <div className="p-4 absolute bottom-8 right-0 max-h-[90%] text-end overflow-y-auto chat_plate">
           {messages.map((item, index) => (
             <div
               key={index}
-              className="mb-4 p-2 rounded-md  gap-4 space-y-2"
+              className="mb-2 px-2 rounded-md gap-2"
             >
               {item.photo && (
-               <div className="flex justify-end overflow-hidden px-4 "> <img
+               <div className="flex justify-end overflow-hidden p-2 "> <img
                src={item.photo}
                alt="Uploaded"
-               className="w-12 h-12 object-cover rounded-md"
+               className="w-16 h-16 object-cover rounded-md"
              /></div>
               )}
               <div>
                 <div className="flex justify-end">
                 <p className="text-gray-800 bg-gray-300 px-4 text-end py-2 w-fit rounded-full">{item.text}</p>
                 </div>
-                <p className="text-gray-400 text-xs px-4">
+                <p className="text-gray-400 text-xs px-2">
                   {new Date(item.timestamp).toLocaleString()}
                 </p>
               </div>
@@ -102,7 +102,7 @@ const Chat = () => {
         </div>
 
         {/* Message input form */}
-        <div className="w-full max-w-3xl mx-auto p-4">
+        <div className="w-full bg-gray-800 max-w-3xl absolute bottom-8  mx-auto p-4">
           {photo && (
             <div className="mb-2">
               <button
@@ -120,7 +120,7 @@ const Chat = () => {
           )}
           <form
             onSubmit={handleSubmit}
-            className="flex items-center gap-2 w-full rounded-lg"
+            className="flex items-center absolute   gap-2 w-full rounded-lg"
           >
             <div className="relative">
               <Input
@@ -139,7 +139,7 @@ const Chat = () => {
               </label>
             </div>
 
-            <div className="flex-1 relative">
+            <div className="flex-1">
               <Input
                 type="text"
                 placeholder="Type a message..."
@@ -157,7 +157,7 @@ const Chat = () => {
                     type="button"
                     size="icon"
                     variant="link"
-                    className="text-gray-500 absolute top-0 right-2 hover:text-gray-800 "
+                    className="text-gray-500 absolute top-[2px] right-12 hover:text-gray-800 "
                   >
                     <Smile className="h-5 w-5" />
                     <span className="sr-only">Add emoji</span>
@@ -180,7 +180,7 @@ const Chat = () => {
               type="submit"
               size="icon"
               variant="ghost"
-              className="text-gray-500 hover:text-gray-800 hover:bg-gray-50"
+              className="text-gray-500 relative right-[12px] -top-[2px] hover:text-gray-800 hover:bg-gray-50"
             >
               <Send className="h-5 w-5" />
               <span className="sr-only">Send message</span>
