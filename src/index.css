@@ -18,6 +18,8 @@
 #searchBar:focus + #cross {
   display: block; 
 }
+
+ 
 /* banner navigation button  */
 
 .swiper-button-prev:after{
@@ -54,4 +56,15 @@ box-shadow: 0 10px 15px -3px rgba(18, 16, 16, 0.1), 0 4px 6px -4px rgba(0, 0, 0,
 }
 .swiper-horizontal > .swiper-pagination-bullets{
   bottom: 0px;
+}
+
+/*================== Emoji picker custom style==================== */
+.emoji-picker-react .emoji-picker-react-search-container {
+  display: none;
+}
+.epr-header {
+  display: none;
+}
+.epr_q53mwh.epr_vl50xg.epr_-3yva2a.epr_c90x4z.epr_-sisw4f.epr_mw4zr1.epr_-kg0voo.epr_iogimd.epr_wtwvf4.epr_-lzq3oa {
+  display: none;
 }
