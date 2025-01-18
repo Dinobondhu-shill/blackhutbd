@@ -46,27 +46,27 @@ const Profile = ({data}) => {
       </div>
       {/* link list of profile  */}
       <div className='mt-10'>
-        <Link to={'/user/orders'} className='flex gap-3 items-center border-b py-3 '>
+        <Link onClick={()=>setShowProfile(!showProfile)} to={'/user/orders'} className='flex gap-3 items-center border-b py-3 '>
           <PiCallBellThin  />
           <h5 className='text-sm font-normal text-gray-600 hover:text-pink-600 transition-transform ease-in-out duration-150'>My Orders</h5>
         </Link>
-        <Link to={'/user/profile'} className='flex gap-3 items-center border-b py-3 '>
+        <Link onClick={()=>setShowProfile(!showProfile)} to={'/user/profile'} className='flex gap-3 items-center border-b py-3 '>
           <FaRegEdit  />
           <h5 className='text-sm font-normal text-gray-600 hover:text-pink-600 transition-transform ease-in-out duration-150'>Edit Profile</h5>
         </Link>
-        <Link to={'/user/live-chat'} className='flex gap-3 items-center border-b py-3 '>
+        <Link onClick={()=>setShowProfile(!showProfile)} to={'/user/live-chat'} className='flex gap-3 items-center border-b py-3 '>
           <IoChatbubblesOutline  />
           <h5 className='text-sm font-normal text-gray-600 hover:text-pink-600 transition-transform ease-in-out duration-150'>Chat</h5>
         </Link>
-        <Link to={'/user/address'} className='flex gap-3 items-center border-b py-3 '>
+        <Link onClick={()=>setShowProfile(!showProfile)} to={'/user/address'} className='flex gap-3 items-center border-b py-3 '>
           <CiLocationOn  />
           <h5 className='text-sm font-normal text-gray-600 hover:text-pink-600 transition-transform ease-in-out duration-150'>Address</h5>
         </Link>
-        <Link to={'/user/change-password'} className='flex gap-3 items-center border-b py-3 '>
+        <Link onClick={()=>setShowProfile(!showProfile)} to={'/user/change-password'} className='flex gap-3 items-center border-b py-3 '>
           <IoKeyOutline   />
           <h5 className='text-sm font-normal text-gray-600 hover:text-pink-600 transition-transform ease-in-out duration-150'>Change Password</h5>
         </Link>
-        <Link className='flex gap-3 items-center py-3 '>
+        <Link onClick={()=>setShowProfile(!showProfile)} className='flex gap-3 items-center py-3 '>
           <CiLogout   />
           <h5 className='text-sm font-normal text-gray-600 hover:text-pink-600 transition-transform ease-in-out duration-150'>Logout</h5>
         </Link>

@@ -15,7 +15,7 @@ export default function Navbar() {
 
   return (
     <nav className=" fixed w-full  z-50 shadow-sm shadow-gray-50 px-5 md:px-10 lg:px-28 bg-white">
-      <div className="container mx-auto px-4 h-16 flex items-center justify-between gap-4">
+      <div className="container  mx-auto h-16 flex items-center justify-between gap-4">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-1">
           <svg
@@ -79,17 +79,28 @@ export default function Navbar() {
           </div>
 
           {/* Right Section */}
-          <div className="flex items-center gap-2">
+          <div className="flex items-center px-4 gap-2">
             {/* Language Selector */}
-            <button className="hidden md:flex items-center gap-2 border px-4 py-2 rounded-full">
-              <img
+            <select className="hidden md:flex items-center gap-2 border px-4 py-2 rounded-full">
+            <option value="English">
+            <img
                 src="https://raw.githubusercontent.com/lipis/flag-icons/main/flags/4x3/gb.svg"
                 alt="English"
                 className="w-5 h-4 object-cover"
               />
               <span className="text-sm font-medium">English</span>
               <ChevronDown className="h-4 w-4 text-gray-500" />
-            </button>
+            </option>
+              <option value="Bangla">
+              <img
+                src="https://raw.githubusercontent.com/lipis/flag-icons/main/flags/4x3/gb.svg"
+                alt="English"
+                className="w-5 h-4 object-cover"
+              />
+              <span className="text-sm font-medium">Bangla</span>
+              <ChevronDown className="h-4 w-4 text-gray-500" />
+              </option>
+            </select>
 
             <MyCart />
             {
@@ -98,7 +109,7 @@ export default function Navbar() {
             
 
             {user ? (
-              <Button onClick={()=>setShowProfile(!showProfile)} className={`cursor-pointer flex items-center gap-2 px-5 py-2  hover:bg-pink-800  text-white rounded-full ${showProfile ? "bg-pink-800" : "bg-pink-700"}`}>
+              <Button onClick={()=>setShowProfile(!showProfile)} className={`cursor-pointer flex items-center gap-2 px-5 py-2   hover:bg-pink-800  text-white rounded-full ${showProfile ? "bg-pink-800" : "bg-pink-700"}`}>
                 <FaRegCircleUser />
                 Account <FaChevronDown />
               </Button>

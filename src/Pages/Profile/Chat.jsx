@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/popover";
 import { Camera, Send, Smile } from "lucide-react";
 import EmojiPicker from "emoji-picker-react";
+import { Textarea } from "@/components/ui/textarea";
 
 const Chat = () => {
   const [message, setMessage] = useState("");
@@ -74,13 +75,13 @@ const Chat = () => {
 
   return (
     <div className="lg:py-6 h-screen  flex justify-center items-center">
-      <div className="bg-gray-800 h-5/6 w-3/5 rounded-md relative">
+      <div className="bg-white h-5/6 w-full md:w-3/5 rounded-md relative">
         {/* Messages display */}
-        <div className="p-4 absolute bottom-8 right-0 max-h-[90%] text-end overflow-y-auto chat_plate">
+        <div className="md:p-4 absolute bottom-8 right-0 max-h-[90%] text-end overflow-y-auto chat_plate w-full">
           {messages.map((item, index) => (
             <div
               key={index}
-              className="mb-2 px-2 rounded-md gap-2"
+              className="mb-4 px-2 rounded-md gap-2"
             >
               {item.photo && (
                <div className="flex justify-end overflow-hidden p-2 "> <img
@@ -89,20 +90,24 @@ const Chat = () => {
                className="w-16 h-16 object-cover rounded-md"
              /></div>
               )}
-              <div>
-                <div className="flex justify-end">
-                <p className="text-gray-800 bg-gray-300 px-4 text-end py-2 w-fit rounded-full">{item.text}</p>
-                </div>
+              <div className="w-full space-y-2">
+                <div className="flex flex-col items-end justify-end w-full  rounded-full">
+                <p className="text-gray-800 bg-gray-300 text-wrap block px-1 md:px-4 text-end py-2  w-fit  rounded-full">{item.text}</p>
                 <p className="text-gray-400 text-xs px-2">
-                  {new Date(item.timestamp).toLocaleString()}
+                  {new Date(item.timestamp).toLocaleTimeString('en-US')}
                 </p>
+                </div>
+                <div className="rounded-full py-2">
+                <p className="text-black bg-gray-300 px-1 md:px-4 py-2  w-fit  rounded-full">Thank you for sending message</p>
+                </div>
+                
               </div>
             </div>
           ))}
         </div>
 
         {/* Message input form */}
-        <div className="w-full bg-gray-800 max-w-3xl absolute bottom-8  mx-auto p-4">
+        <div className="w-full bg-white max-w-3xl absolute bottom-8  mx-auto p-4">
           {photo && (
             <div className="mb-2">
               <button
@@ -126,7 +131,9 @@ const Chat = () => {
               <Input
                 id="photo"
                 type="file"
+    
                 accept="image/*"
+                multiple
                 className="hidden"
                 onChange={handlePhotoChange}
               />
@@ -145,7 +152,7 @@ const Chat = () => {
                 placeholder="Type a message..."
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
-                className="flex-1 border-0 focus-visible:ring-0 focus-visible:ring-offset-0 bg-gray-200 rounded-full"
+                className="flex-1 border-0 focus-visible:ring-0 focus-visible:ring-offset-0  bg-gray-200 rounded-full"
                 ref={inputBoxRef}
               />
               <Popover

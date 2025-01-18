@@ -9,7 +9,7 @@ const Popular = () => {
   return (
     <div>
       <SectionTitle heading={'Most Popular Items'} />
-      <div className='grid grid-cols-3 gap-5 my-10'>
+      <div className='grid grid-cols-1 md:grid-cols-3 gap-5 my-10'>
       <SmallCard image={img2} name={'coca cola'} price={220} description={'This is a sample description'} />
       <SmallCard image={img1} name={'coca cola'} price={220} description={'This is a sample description'} />
       <SmallCard image={img2} name={'coca cola'} price={220} description={'This is a sample description'} />

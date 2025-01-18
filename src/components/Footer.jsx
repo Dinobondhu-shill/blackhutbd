@@ -7,9 +7,9 @@ import logo from '../../public/food/New/3.png'
 
 const Footer = () => {
   return (
-    <footer className="bg-[#FF0066] text-white px-5 md:px-10 lg:px-28">
-    <div className="container px-4 py-8 mx-auto">
-      <div className="flex justify-between">
+    <footer className="bg-[#FF0066] text-white px-5  md:px-10 lg:px-28">
+    <div className="container px-4 py-8  mx-auto">
+      <div className="flex flex-col md:flex-row justify-between">
         {/* Left Column - Newsletter */}
         <div className="space-y-4 ">
           <img 
@@ -54,18 +54,18 @@ const Footer = () => {
 
         {/* Right Column - Contact */}
         <div className="space-y-4">
-          <Link href="mailto:contact@blackhutbd.com" className="flex items-center gap-2 text-sm hover:underline">
+          <a href="mailto:contact@blackhutbd.com" className="flex items-center gap-2 text-sm hover:underline">
             contact@blackhutbd.com
-          </Link>
-          <Link href="tel:01929-049000" className="flex items-center gap-2 text-sm hover:underline">
+          </a>
+          <a href="tel:01929-049000" className="flex items-center gap-2 text-sm hover:underline">
             01929-049000
-          </Link>
+          </a>
         </div>
       </div>
 
       {/* Copyright */}
       <div className="pt-8 mt-8 text-sm text-center border-t border-white/20">
-        © Black Hut by Worker99 Ltd 2024, All Rights Reserved
+        © Danpite.tech Ltd 2025, All Rights Reserved
       </div>
     </div>
   </footer>

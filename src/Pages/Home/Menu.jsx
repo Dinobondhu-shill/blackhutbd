@@ -22,16 +22,27 @@ const Menu = () => {
     <div className='py-10'>
       <SectionTitle heading={'our menu'} />
       <Swiper
-      spaceBetween={20}
-      slidesPerView={8}
-        pagination={{
-          dynamicBullets: true,
-        }}
-        modules={[Pagination, Autoplay]}
-        loop={true}
-        autoplay={true}
-        className="mySwiper grid grid-cols-8 gap-2 py-3"
-      >
+  spaceBetween={20}
+  slidesPerView={8}
+  breakpoints={{
+    320: { // For small screens (mobile)
+      slidesPerView: 3, // Show 3 items
+    },
+    768: { // For medium screens (tablet)
+      slidesPerView: 5, // Show 4 items
+    },
+    1024: { // For large screens (desktop)
+      slidesPerView: 8, // Show 5 items
+    },
+  }}
+  pagination={{
+    dynamicBullets: true,
+  }}
+  modules={[Pagination, Autoplay]}
+  loop={true}
+  autoplay={true}
+  className="mySwiper grid grid-cols-8 gap-2 py-3"
+>
         <SwiperSlide><MenuCard image={img1} name={'Appetizers'}/></SwiperSlide>
         <SwiperSlide><MenuCard image={img2} name={'Appetizers'}/></SwiperSlide>
         <SwiperSlide><MenuCard image={img3} name={'Appetizers'}/></SwiperSlide>

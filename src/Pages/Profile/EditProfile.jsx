@@ -47,14 +47,14 @@ const EditProfile = () => {
       }
     };
   return (
-    <div className="lg:py-10 relative top-12 min-h-screen flex flex-col items-center w-full
+    <div className="lg:py-10 py-4 relative top-12 min-h-screen flex flex-col items-center w-full
     ">
        <div className='w-full '>
     <BackHome />
    
     </div>
      <div className='flex flex-col items-start justify-center bg-white h-fit p-5 rounded-md shadow-2xl w-fit'>
-     <h4 className=' font-bold text-3xl mb-5'>Edit Profile</h4>
+     <h4 className=' font-bold text-lg md:text-3xl mb-5'>Edit Profile</h4>
       {/* update profile form  */}
       <div className='mb-10'>
       <form onSubmit={handleSubmit}>
