@@ -49,10 +49,14 @@ border-radius: 100%;
 box-shadow: 0 10px 15px -3px rgba(18, 16, 16, 0.1), 0 4px 6px -4px rgba(0, 0, 0, .1);
 }
 .swiper-button-prev:hover:after {
-  background-color: rgb(246, 164, 177);
+  background-color: rgb(239, 104, 126);
+  color:white;
+  font-weight: 700;
 }
 .swiper-button-next:hover:after {
-  background-color: rgb(246, 164, 177);
+  background-color: rgb(237, 81, 107);
+  color:white;
+  font-weight: 700;
 }
 .swiper-horizontal > .swiper-pagination-bullets{
   bottom: 0px;

@@ -1,3 +1,4 @@
+import TeamSection from "../Team";
 import Banner from "./Banner";
 import Featured from "./Featured";
 import Menu from "./Menu";
@@ -11,6 +12,7 @@ const Homepage = () => {
      <Menu />
      <Featured />
      <Popular />
+     {/* <TeamSection /> */}
     </div>
   );
 };

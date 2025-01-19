@@ -1,3 +1,4 @@
+import BackHome from "@/components/BackHome";
 import React, { useState } from "react";
 
 
@@ -41,6 +42,7 @@ const ChangePassword = () => {
   return (
     <div className="py-10 relative top-12">
      <div className="max-w-xl mx-auto p-6 md:p-8">
+      <BackHome />
       <form onSubmit={handleSubmit} className="space-y-6">
         <h1 className="text-2xl font-semibold text-gray-900">
           Change Password

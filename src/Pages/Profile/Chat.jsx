@@ -92,7 +92,9 @@ const Chat = () => {
               )}
               <div className="w-full space-y-2">
                 <div className="flex flex-col items-end justify-end w-full  rounded-full">
-                <p className="text-gray-800 bg-gray-300 text-wrap block px-1 md:px-4 text-end py-2  w-fit  rounded-full">{item.text}</p>
+                <div className="bg-gray-300 text-ellipsis max-w-96 rounded-full p-2">
+                <p className="text-gray-800 truncate break-all  text-wrap block px-1 md:px-4 text-end py-2  w-fit ">{item.text}</p>
+                </div>
                 <p className="text-gray-400 text-xs px-2">
                   {new Date(item.timestamp).toLocaleTimeString('en-US')}
                 </p>
